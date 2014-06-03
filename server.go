@@ -24,6 +24,6 @@ func main() {
 	}()
 
 	fmt.Println("Listening on", address)
-	<-done
+	<-done //Keeps us blocking until the server is done
 
 }
