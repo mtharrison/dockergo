@@ -16,7 +16,7 @@ func (handler MyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func main() {
 
 	done := make(chan bool)
-	address := "127.0.0.1:8080"
+	address := "0.0.0.0:8080"
 
 	go func() {
 		http.ListenAndServe(address, MyHandler{})
